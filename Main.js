@@ -49,6 +49,7 @@ function mostrarTitulos() {
         item.style.flexDirection = "column"; // Para mostrar el título y la descripción en columnas
         item.style.margin = "50px";
         item.style.textAlign = "justify";
+        item.style.border = "black solid 5px"
         
         let texto = document.createElement("h1");
         texto.classList.add("titulo")
@@ -63,7 +64,7 @@ function mostrarTitulos() {
         // Botón para borrar el título y la descripción específicos
         let botonBorrar = document.createElement("button");
         botonBorrar.textContent = "Borrar";
-        botonBorrar.style.background =""
+        botonBorrar.classList.add("botonEli")
 
         // Evento para borrar el título y la descripción específicos
         botonBorrar.addEventListener("click", () => {
