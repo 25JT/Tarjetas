@@ -45,11 +45,8 @@ function mostrarTitulos() {
     // Mostrar cada título con su descripción // Diseño general de la tarjeta
     agenda.titulos.forEach((titulo, index) => {
         let item = document.createElement("div");
-        item.style.display = "flex";
-        item.style.flexDirection = "column"; // Para mostrar el título y la descripción en columnas
-        item.style.margin = "50px";
-        item.style.textAlign = "justify";
-        item.style.border = "black solid 5px"
+        item.classList.add("cajatarjetas")
+
         
         let texto = document.createElement("h1");
         texto.classList.add("titulo")

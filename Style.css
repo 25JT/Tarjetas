@@ -19,7 +19,7 @@ body {
 }
 .titulo {
     text-transform: uppercase;
-    border: outset #ffffff 5px;
+    border:  outset  #ffffff 5px;
     border-radius: 15px;
     background: #FA4032;
     text-align: center;
@@ -34,10 +34,25 @@ body {
     margin-top: 40px;
     margin-bottom: 40px;
     font-size: 20px;
+    text-align: justify;
+    margin: 1%;
 }
 
 .botonEli{
     margin: 0px auto;
     font-size: x-large;
     
+}
+
+.cajatarjetas{
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    border:#4d4c4c dashed 5px;
+    border-radius: 15px;
+
+    border-radius: 29px;
+    background: #ffffff;
+    box-shadow: inset 11px 11px 22px #c2c2c2,
+                inset -11px -11px 22px #ffffff;
 }
