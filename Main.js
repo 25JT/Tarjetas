@@ -1,53 +1,82 @@
-let titulos = [];
-let element = ''
+let agenda = {
+    titulos: JSON.parse(localStorage.getItem("titulos")) || [],
+    descripcion: JSON.parse(localStorage.getItem("decriptarea")) || []
+};
 
-document.getElementById("enviar").addEventListener("click", () =>{
-    event.preventDefault()
-    let titulo = document.getElementById("titulo").value
-  //validacion if 
-  if (titulo.trim() === "") {
-    alert("Por favor, escribe un título.");
-    return;
-}
+// Mostrar los elementos guardados en localStorage
+mostrarTitulos();
 
+// Evento para añadir un título y su descripción
+document.getElementById("enviar").addEventListener("click", (event) => {
+    event.preventDefault();
+    let titulo = document.getElementById("titulo").value.trim();
+    let descrip = document.getElementById("tarea").value.trim();
 
-localStorage.setItem(element,titulo)
-  titulos.push(titulo);
+    // Validación IF
+    if (titulo === "" || descrip === "") {
+        Swal.fire({
+            title: "CAMPOS EN BLANCO",
+            text: "Por favor escribe tu Nota",
+            icon: "error"
+          });
+        return;
+    }
 
-  document.getElementById("titulo").value = ""
-  
-  mostrarTitulos();
+    // Agregar título y descripción al objeto agenda
+    agenda.titulos.push(titulo);
+    agenda.descripcion.push(descrip);
 
-})
+    // Guardar tanto los títulos como las descripciones en localStorage
+    localStorage.setItem("titulos", JSON.stringify(agenda.titulos));
+    localStorage.setItem("decriptarea", JSON.stringify(agenda.descripcion));
 
+    // Limpiar los campos de entrada
+    document.getElementById("titulo").value = "";
+    document.getElementById("tarea").value = "";
+
+    mostrarTitulos(); // Mostrar los títulos y descripciones actualizados
+});
+
+// Función para mostrar los títulos y descripciones
 function mostrarTitulos() {
+    let lista = document.getElementById("nTarea");
+    lista.innerHTML = ""; // Limpiar la lista
 
-    let lista = document.getElementById("nTarea")
-    let borrar = document.getElementById("borrar")
-
-    borrar.innerHTML = "BORRAR"
-    lista.innerHTML = ""
-    
-    titulos.forEach((titulo,index) => {
-        let li = document.createElement("h1");
-        borrar.addEventListener("click",()=>{
-            localStorage.removeItem(element)
-            alert("Se borro We")
-        })
-        li.textContent = `${index + 1}. ${titulo}`;
+    // Mostrar cada título con su descripción // Diseño general de la tarjeta
+    agenda.titulos.forEach((titulo, index) => {
+        let item = document.createElement("div");
+        item.style.display = "flex";
+        item.style.flexDirection = "column"; // Para mostrar el título y la descripción en columnas
+        item.style.margin = "50px";
+        item.style.textAlign = "justify";
         
-        lista.appendChild(li); 
-    })
+        let texto = document.createElement("h1");
+        texto.classList.add("titulo")
+        texto.textContent = `${index + 1}. ${titulo}`;
+
+
+        let descripcion = document.createElement("p");
+        descripcion.textContent = `${agenda.descripcion[index]}`
+        descripcion.classList.add("descripcion")
+        
+
+        // Botón para borrar el título y la descripción específicos
+        let botonBorrar = document.createElement("button");
+        botonBorrar.textContent = "Borrar";
+        botonBorrar.style.background =""
+
+        // Evento para borrar el título y la descripción específicos
+        botonBorrar.addEventListener("click", () => {
+            agenda.titulos.splice(index, 1); // Elimina el título del array
+            agenda.descripcion.splice(index, 1); // Elimina la descripción del array
+            localStorage.setItem("titulos", JSON.stringify(agenda.titulos)); // Actualiza localStorage con los títulos
+            localStorage.setItem("decriptarea", JSON.stringify(agenda.descripcion)); // Actualiza localStorage con las descripciones
+            mostrarTitulos(); // Refresca la lista
+        });
+
+        item.appendChild(texto);
+        item.appendChild(descripcion);
+        item.appendChild(botonBorrar);
+        lista.appendChild(item);
+    });
 }
-
-let lista = document.getElementById("nTarea")
-lista.innerHTML = localStorage.getItem(element)
-
-
-for (let i = 0; i < 1; i++) {
-    element = element + i;
-    console.log(element);
-}
-
-
-

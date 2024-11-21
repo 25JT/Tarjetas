@@ -1,3 +1,7 @@
+body{
+    background: #FEF3E2;
+}
+
 .btn{
 display: flex;
 margin: 0px auto;
@@ -15,4 +19,25 @@ margin: 0px auto;
     
 }
 
+#nTarea {
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);
+}
 
+.titulo{
+    text-transform: uppercase;
+    border: ridge  #ffffff 5px;
+    background: #FA4032;
+    margin: 0px auto;
+    color: white;  
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);
+}
+
+.descripcion{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
