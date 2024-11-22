@@ -1,10 +1,24 @@
 body {
     background: #FEF3E2;
 }
+
 .form {
     margin: 50px;
 }
+#nameT{
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+}
+#titulo{
+    border: black solid 1px;
+    box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+}
 
+#tarea{
+    border: black solid 1px;
+    box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+}
 .btn {
     display: flex;
     margin: 0px auto;
@@ -21,7 +35,7 @@ body {
     font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
-    line-height: 20px;    
+    line-height: 20px;
     overflow: visible;
     padding: 12px 40px;
     text-align: center;
@@ -34,8 +48,6 @@ body {
 
 .btn:focus {
     text-decoration: none;
-
-    
 }
 
 .btn:hover {
@@ -63,6 +75,7 @@ body {
     justify-content: center;
     gap: 5%;
     margin: 0px 10px;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
 }
 
 .titulo {
@@ -73,6 +86,7 @@ body {
     text-transform: uppercase;
     border: solid #000000 1px;
     border-radius: 5px;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
     background: #00e1ff;
     text-align: center;
     color: white;
@@ -84,19 +98,20 @@ body {
 .descripcion {
     margin-top: 40px;
     margin-bottom: 40px;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
     font-size: 20px;
     text-align: justify;
     margin: 1%;
 }
 
 .botonEli {
-
-    width: 30%;
+    
     margin: 0px auto;
     margin-bottom: 1.5%;
     margin-top: 1%;
     font-size: large;
     background: white;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
     color: black;
     border: solid #ff000091 2px;
     border-radius: 5px;
@@ -112,18 +127,16 @@ body {
     background: #ff0000;
     color: white;
     text-transform: uppercase;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
     border: black outset 2px;
     box-shadow: #ffffff 4px 4px 0 0, #000 4px 4px 0 1px;
-
-   
 }
-
-
 
 .cajatarjetas {
     display: flex;
     flex-direction: column;
     margin: 50px;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
     border: #4d4c4c dashed 5px;
     border-radius: 15px;
     border-radius: 29px;
@@ -132,6 +145,9 @@ body {
         inset -11px -11px 22px #ffffff;
 }
 
+.butonI{
+    background: black;
+}
 
 
 @media (min-width: 768px) {
@@ -139,3 +155,29 @@ body {
         padding: 12px 50px;
     }
 }
+
+
+  /* Botón de confirmación */
+  .mi-boton-confirmar {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .Bordecampo{
+    border: 2px solid black;
+    box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+  }
+  .botoncampo{
+    background-color: #ff0000;
+    box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
+  }
+  .botoncampo:hover {
+    background-color: #00ff0d;
+    box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
+    
+  }

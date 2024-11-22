@@ -1,6 +1,6 @@
 document.getElementById("enviar").innerText = "Enviar"
 document.getElementById("mensaje").innerHTML = "Mensaje"
-document.getElementById("nameT").innerText ="Nombre de la nota"
+document.getElementById("nameT").innerText = "Nombre de la nota"
 let agenda = {
     titulos: JSON.parse(localStorage.getItem("titulos")) || [],
     descripcion: JSON.parse(localStorage.getItem("decriptarea")) || []
@@ -20,8 +20,16 @@ document.getElementById("enviar").addEventListener("click", (event) => {
         Swal.fire({
             title: "CAMPOS EN BLANCO",
             text: "Por favor escribe tu Nota",
-            icon: "error"
-          });
+            icon: "error",
+            customClass: {
+                popup:'Bordecampo',
+                
+                
+                confirmButton: 'botoncampo', // Clase para el botón de confirmación
+               // Clase para el botón de cancelación (si está presente)
+              },
+
+        });
         return;
     }
 
@@ -36,13 +44,14 @@ document.getElementById("enviar").addEventListener("click", (event) => {
     // Limpiar los campos de entrada
     document.getElementById("titulo").value = "";
     document.getElementById("tarea").value = "";
+    /// cambiar esta alerta TA FEA 
     Swal.fire({
         position: "center",
         icon: "success",
         title: "Nota creada",
         showConfirmButton: false,
         timer: 1000
-      });
+    });
 
     mostrarTitulos(); // Mostrar los títulos y descripciones actualizados
 });
@@ -57,7 +66,7 @@ function mostrarTitulos() {
         let item = document.createElement("div");
         item.classList.add("cajatarjetas")
 
-        
+
         let texto = document.createElement("h1");
         texto.classList.add("titulo")
         texto.textContent = `${index + 1}. ${titulo}`;
@@ -66,7 +75,7 @@ function mostrarTitulos() {
         let descripcion = document.createElement("p");
         descripcion.textContent = `${agenda.descripcion[index]}`
         descripcion.classList.add("descripcion")
-        
+
 
         // Botón para borrar el título y la descripción específicos
         let botonBorrar = document.createElement("button");
@@ -84,21 +93,21 @@ function mostrarTitulos() {
                 confirmButtonColor: "#3085d6",
                 cancelButtonColor: "#d33",
                 confirmButtonText: "Si, eliminala!",
-                cancelButtonText:"Cancelar"
-              }).then((result) => {
+                cancelButtonText: "Cancelar"
+            }).then((result) => {
                 if (result.isConfirmed) {
                     agenda.titulos.splice(index, 1); // Elimina el título del array
                     agenda.descripcion.splice(index, 1); // Elimina la descripción del array
                     localStorage.setItem("titulos", JSON.stringify(agenda.titulos)); // Actualiza localStorage con los títulos
                     localStorage.setItem("decriptarea", JSON.stringify(agenda.descripcion)); // Actualiza localStorage con las descripciones 
                     //alerta de nota eliminada
-                  Swal.fire({
-                    title: "Nota eliminada",
-                    icon: "success"
-                  });
-                  mostrarTitulos(); // Refresca la lista
+                    Swal.fire({
+                        title: "Nota eliminada",
+                        icon: "success"
+                    });
+                    mostrarTitulos(); // Refresca la lista
                 }
-              });  
+            });
         });
 
         item.appendChild(texto);
