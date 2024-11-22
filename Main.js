@@ -33,6 +33,13 @@ document.getElementById("enviar").addEventListener("click", (event) => {
     // Limpiar los campos de entrada
     document.getElementById("titulo").value = "";
     document.getElementById("tarea").value = "";
+    Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Nota creada",
+        showConfirmButton: false,
+        timer: 1000
+      });
 
     mostrarTitulos(); // Mostrar los títulos y descripciones actualizados
 });
@@ -65,11 +72,30 @@ function mostrarTitulos() {
 
         // Evento para borrar el título y la descripción específicos
         botonBorrar.addEventListener("click", () => {
-            agenda.titulos.splice(index, 1); // Elimina el título del array
-            agenda.descripcion.splice(index, 1); // Elimina la descripción del array
-            localStorage.setItem("titulos", JSON.stringify(agenda.titulos)); // Actualiza localStorage con los títulos
-            localStorage.setItem("decriptarea", JSON.stringify(agenda.descripcion)); // Actualiza localStorage con las descripciones
-            mostrarTitulos(); // Refresca la lista
+
+            Swal.fire({
+                title: "¿Quieres borrar esta Nota?",
+                text: "Una vez borrada no podras recuperarla",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Si, eliminala!",
+                cancelButtonText:"Cancelar"
+              }).then((result) => {
+                if (result.isConfirmed) {
+                    agenda.titulos.splice(index, 1); // Elimina el título del array
+                    agenda.descripcion.splice(index, 1); // Elimina la descripción del array
+                    localStorage.setItem("titulos", JSON.stringify(agenda.titulos)); // Actualiza localStorage con los títulos
+                    localStorage.setItem("decriptarea", JSON.stringify(agenda.descripcion)); // Actualiza localStorage con las descripciones 
+                    //alerta de nota eliminada
+                  Swal.fire({
+                    title: "Nota eliminada",
+                    icon: "success"
+                  });
+                  mostrarTitulos(); // Refresca la lista
+                }
+              });  
         });
 
         item.appendChild(texto);

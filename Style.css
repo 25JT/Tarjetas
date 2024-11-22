@@ -39,10 +39,34 @@ body {
 }
 
 .botonEli{
-    margin: 0px auto;
-    font-size: x-large;
     
+   width: 30%;
+   margin: 0px auto;
+    margin-bottom: 1.5%;
+    margin-top: 1%;
+    font-size: x-large;
+    background: white;
+    color: black;
+    border: solid #ff000091 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+
 }
+
+.botonEli:hover{
+    transform: scale(1.05);
+    transition: transform 0.6s;
+    background: red;
+    color: white;
+    text-transform: uppercase;
+    border: black outset 2px;
+    -webkit-box-shadow: 10px 10px 0px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 0px -6px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 0px -6px rgba(0,0,0,0.75);
+}
+
+
 
 .cajatarjetas{
     display: flex;
@@ -50,7 +74,6 @@ body {
     margin: 50px;
     border:#4d4c4c dashed 5px;
     border-radius: 15px;
-
     border-radius: 29px;
     background: #ffffff;
     box-shadow: inset 11px 11px 22px #c2c2c2,
