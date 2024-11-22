@@ -1,3 +1,6 @@
+document.getElementById("enviar").innerText = "Enviar"
+document.getElementById("mensaje").innerHTML = "Mensaje"
+document.getElementById("nameT").innerText ="Nombre de la nota"
 let agenda = {
     titulos: JSON.parse(localStorage.getItem("titulos")) || [],
     descripcion: JSON.parse(localStorage.getItem("decriptarea")) || []
