@@ -4,20 +4,30 @@ body {
 
 .form {
     margin: 50px;
+    
 }
 #nameT{
     font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#mensaje{
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 #titulo{
     border: black solid 1px;
     box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
     font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    
 }
 
 #tarea{
     border: black solid 1px;
     box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
     font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    
 }
 .btn {
     display: flex;
@@ -149,14 +159,6 @@ body {
     background: black;
 }
 
-
-@media (min-width: 768px) {
-    .btn {
-        padding: 12px 50px;
-    }
-}
-
-
   /* Botón de confirmación */
   .mi-boton-confirmar {
     background-color: #4caf50;
@@ -168,6 +170,7 @@ body {
   }
   
   .Bordecampo{
+    background: #FEF3E2;
     border: 2px solid black;
     box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
     font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
@@ -178,6 +181,20 @@ body {
   }
   .botoncampo:hover {
     background-color: #00ff0d;
-    box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
-    
+    box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;  
   }
+  .alertText{
+    text-transform: uppercase;
+  }
+.btn-ellim{
+    background-color: #00ff0d;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    text-transform: uppercase;
+    box-shadow: #ffffff 4px 4px 0 0, #000 4px 4px 0 1px;
+}
+
+@media (min-width: 768px) {
+    .btn {
+        padding: 12px 50px;
+    }
+}

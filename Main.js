@@ -1,3 +1,6 @@
+AOS.init();
+
+
 document.getElementById("enviar").innerText = "Enviar"
 document.getElementById("mensaje").innerHTML = "Mensaje"
 document.getElementById("nameT").innerText = "Nombre de la nota"
@@ -22,12 +25,9 @@ document.getElementById("enviar").addEventListener("click", (event) => {
             text: "Por favor escribe tu Nota",
             icon: "error",
             customClass: {
-                popup:'Bordecampo',
-                
-                
-                confirmButton: 'botoncampo', // Clase para el botón de confirmación
-               // Clase para el botón de cancelación (si está presente)
-              },
+                popup: 'Bordecampo',
+                confirmButton: 'botoncampo',
+            },
 
         });
         return;
@@ -50,9 +50,13 @@ document.getElementById("enviar").addEventListener("click", (event) => {
         icon: "success",
         title: "Nota creada",
         showConfirmButton: false,
-        timer: 1000
-    });
+        timer: 1000,
+        customClass: {
+            popup: 'Bordecampo',
+            title: 'alertText'
 
+        },
+    });
     mostrarTitulos(); // Mostrar los títulos y descripciones actualizados
 });
 
@@ -65,7 +69,7 @@ function mostrarTitulos() {
     agenda.titulos.forEach((titulo, index) => {
         let item = document.createElement("div");
         item.classList.add("cajatarjetas")
-
+        item.setAttribute("data-aos", "fade-up")
 
         let texto = document.createElement("h1");
         texto.classList.add("titulo")
@@ -90,10 +94,13 @@ function mostrarTitulos() {
                 text: "Una vez borrada no podras recuperarla",
                 icon: "warning",
                 showCancelButton: true,
-                confirmButtonColor: "#3085d6",
-                cancelButtonColor: "#d33",
                 confirmButtonText: "Si, eliminala!",
-                cancelButtonText: "Cancelar"
+                cancelButtonText: "Cancelar",
+                customClass: {
+                    popup:'Bordecampo',
+                    title: 'alertText',
+                    confirmButton: 'btn-ellim'
+                }
             }).then((result) => {
                 if (result.isConfirmed) {
                     agenda.titulos.splice(index, 1); // Elimina el título del array
