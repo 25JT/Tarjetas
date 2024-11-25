@@ -1,5 +1,9 @@
+
 body {
     background: #FEF3E2;
+    background-image: url("nuve.webp"),url("nuve.webp");
+    background-repeat: repeat-y, repeat-y;
+    background-position: top left, top right;
 }
 
 #titulopag {
