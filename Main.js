@@ -1,5 +1,14 @@
 AOS.init();
 
+//animacion titulo
+
+var typed = new Typed('#titulopag', {
+    strings: ["NOTAS RAPIDAS PARA TI 🤓", "Bienvenido"],
+    typeSpeed: 50,
+    loop: true,
+    backSpeed: 30,
+    
+  });
 
 document.getElementById("enviar").innerText = "Enviar"
 document.getElementById("mensaje").innerHTML = "Mensaje"
@@ -97,9 +106,10 @@ function mostrarTitulos() {
                 confirmButtonText: "Si, eliminala!",
                 cancelButtonText: "Cancelar",
                 customClass: {
-                    popup:'Bordecampo',
+                    popup: 'Bordecampo',
                     title: 'alertText',
-                    confirmButton: 'btn-ellim'
+                    confirmButton: 'btn-ellim',
+                    cancelButton: 'btn-cancel'
                 }
             }).then((result) => {
                 if (result.isConfirmed) {
@@ -110,7 +120,12 @@ function mostrarTitulos() {
                     //alerta de nota eliminada
                     Swal.fire({
                         title: "Nota eliminada",
-                        icon: "success"
+                        icon: "success",
+                        customClass: {
+                            popup: 'Bordecampo',
+                            title: 'alertText',
+                            confirmButton: 'btn-ellim',
+                        }
                     });
                     mostrarTitulos(); // Refresca la lista
                 }

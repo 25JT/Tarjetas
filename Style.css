@@ -2,33 +2,51 @@ body {
     background: #FEF3E2;
 }
 
-.form {
-    margin: 50px;
-    
-}
-#nameT{
+#titulopag {
     font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
-    font-weight: bold;
+    margin: 1%;
+    text-align: center;
+    height: 1em;
     text-transform: uppercase;
-}
-#mensaje{
-    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-#titulo{
-    border: black solid 1px;
-    box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
-    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
-    
+
 }
 
-#tarea{
+.div-titulo {
+    border: #000 1px solid;
+    box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
+}
+
+.form {
+    margin: 50px;
+
+}
+
+#nameT {
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#mensaje {
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#titulo {
     border: black solid 1px;
     box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
     font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
-    
+
 }
+
+#tarea {
+    border: black solid 1px;
+    box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+
+}
+
 .btn {
     display: flex;
     margin: 0px auto;
@@ -115,7 +133,7 @@ body {
 }
 
 .botonEli {
-    
+
     margin: 0px auto;
     margin-bottom: 1.5%;
     margin-top: 1%;
@@ -155,43 +173,70 @@ body {
         inset -11px -11px 22px #ffffff;
 }
 
-.butonI{
+.butonI {
     background: black;
 }
 
-  /* Botón de confirmación */
-  .mi-boton-confirmar {
+/* Botón de confirmación */
+.mi-boton-confirmar {
     background-color: #4caf50;
     color: white;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-  }
-  
-  .Bordecampo{
+}
+
+.Bordecampo {
     background: #FEF3E2;
     border: 2px solid black;
     box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
     font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
-  }
-  .botoncampo{
+}
+
+.botoncampo {
     background-color: #ff0000;
     box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
-  }
-  .botoncampo:hover {
+}
+
+.botoncampo:hover {
     background-color: #00ff0d;
-    box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;  
-  }
-  .alertText{
+    box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
+}
+
+.alertText {
     text-transform: uppercase;
-  }
-.btn-ellim{
-    background-color: #00ff0d;
+}
+
+.btn-ellim {
+    background-color: #42fc4b;
     font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
     text-transform: uppercase;
-    box-shadow: #ffffff 4px 4px 0 0, #000 4px 4px 0 1px;
+    color: black;
+    border: #000 1px solid;
+    box-shadow: #ffffff 2px 2px 0 0, #000 2px 2px 0 0.5px;
 }
+
+.btn-ellim:hover {
+    background-color: #01ff9e;
+    transform: scale(1.05);
+    transition: transform 0.6s;
+}
+
+.btn-cancel {
+    background-color: #ff0000;
+    border: #000 1px solid;
+    color: black;
+    box-shadow: #ffffff 2px 2px 0 0, #000 2px 2px 0 0.5px;
+}
+
+.btn-cancel:hover {
+    background-color: #ff1f01;
+    transform: scale(1.05);
+    transition: transform 0.6s;
+}
+
+
 
 @media (min-width: 768px) {
     .btn {
