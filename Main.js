@@ -7,8 +7,8 @@ var typed = new Typed('#titulopag', {
     typeSpeed: 190,
     loop: true,
     backSpeed: 30,
-    
-  });
+
+});
 
 document.getElementById("enviar").innerText = "Enviar"
 document.getElementById("mensaje").innerHTML = "Mensaje"
