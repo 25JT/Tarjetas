@@ -21,10 +21,7 @@ body {
     border: #000 1px solid;
     box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
     margin: 0.5%;
-    background-image: url("cloud-graphic-clipart-design-free-png.webp"), url("cloud-graphic-clipart-design-free-png.webp");
-    background-repeat: no-repeat, no-repeat;
-    background-position: 0%,100%;
-    background-size: contain;
+   
 }
 
 .form {
@@ -272,9 +269,6 @@ body {
         background-size:auto;
     }
 
-    .div-titulo {               
-        background-image:none;
-        background-size:20%;
-    }
+
 
 }
