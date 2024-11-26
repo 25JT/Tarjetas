@@ -3,8 +3,8 @@ AOS.init();
 //animacion titulo
 
 var typed = new Typed('#titulopag', {
-    strings: ["NOTAS RAPIDAS PARA TI 🤓", "Bienvenido"],
-    typeSpeed: 50,
+    strings: ["NOTAS RAPIDAS PARA TI", "Bienvenido"],
+    typeSpeed: 190,
     loop: true,
     backSpeed: 30,
     

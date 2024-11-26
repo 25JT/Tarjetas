@@ -12,12 +12,19 @@ body {
     text-align: center;
     height: 1em;
     text-transform: uppercase;
+    color: red;
+    font-weight: bold;
 
 }
 
 .div-titulo {
     border: #000 1px solid;
     box-shadow: #ffffff4b 4px 4px 0 0, #000 4px 4px 0 1px;
+    margin: 0.5%;
+    background-image: url("cloud-graphic-clipart-design-free-png.webp"), url("cloud-graphic-clipart-design-free-png.webp");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0%,100%;
+    background-size: contain;
 }
 
 .form {
@@ -246,4 +253,33 @@ body {
     .btn {
         padding: 12px 50px;
     }
+
+}
+
+@media( max-width: 1000px){
+    
+    body {
+        
+        background-image: url("nuve.webp");
+        background-repeat: repeat-y;
+        
+    }
+
+}
+
+@media( max-width: 500px){
+    
+    body {
+        
+        background-image: url("nuve.webp");
+        background-repeat: repeat-y;
+        background-position: center;
+        background-size:auto;
+    }
+
+    .div-titulo {               
+        background-image:none;
+        background-size:20%;
+    }
+
 }
