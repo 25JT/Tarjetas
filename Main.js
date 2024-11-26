@@ -13,6 +13,7 @@ var typed = new Typed('#titulopag', {
 document.getElementById("enviar").innerText = "Enviar"
 document.getElementById("mensaje").innerHTML = "Mensaje"
 document.getElementById("nameT").innerText = "Nombre de la nota"
+document.getElementById("pagti").innerText = "Notas Rapidas"
 let agenda = {
     titulos: JSON.parse(localStorage.getItem("titulos")) || [],
     descripcion: JSON.parse(localStorage.getItem("decriptarea")) || []
